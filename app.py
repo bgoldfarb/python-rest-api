@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 
 
 app = Flask(__name__)
@@ -16,7 +16,7 @@ stores = [
 
 @app.route('/') #https://www.google.com/ Home page
 def home():
-    return "Hello World"
+    return render_template('index.html')
 
 #POST - used to recieve data {name:}
 #GET - used to send data back only 
